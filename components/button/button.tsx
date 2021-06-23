@@ -32,7 +32,7 @@ const Button = ({ children, onPress, style }: ButtonProps) => {
     const backgroundColor = interpolateColor(
       animatedState.value,
       [0, 1],
-      [Palette.NavyBlue, Palette.DarkerBlue],
+      [Palette.Blue, Palette.DarkBlue],
     )
     const scale = interpolate(animatedState.value, [0, 1], [1, 0.95])
     return { backgroundColor, transform: [{ scale }] }
@@ -66,7 +66,7 @@ const Button = ({ children, onPress, style }: ButtonProps) => {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: Palette.NavyBlue,
+    backgroundColor: Palette.Blue,
     paddingHorizontal: 12,
     paddingVertical: 8,
     borderRadius: 4,

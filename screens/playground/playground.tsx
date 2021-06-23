@@ -1,16 +1,14 @@
 import React from 'react'
 import { View, StyleSheet, SafeAreaView } from 'react-native'
-import { StatusBar } from 'expo-status-bar'
 import Palette from '../../palette'
 import { Text } from 'react-native'
 import Constants from 'expo-constants'
 
 interface Props extends NavigationProps<'Playground'> {}
 
-const PlaygroundScreen = ({ navigation }: Props) => {
+const PlaygroundScreen = ({}: Props) => {
   return (
     <SafeAreaView style={styles.container}>
-      <StatusBar style="light" backgroundColor={Palette.NavyBlue} />
       <Text style={styles.text}>Playground</Text>
       <View style={styles.subcontainer}></View>
     </SafeAreaView>
@@ -28,7 +26,7 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   text: {
-    color: Palette.NavyBlue,
+    color: Palette.Blue,
     fontWeight: 'bold',
     fontSize: 30,
   },

@@ -6,6 +6,8 @@ import {
 } from '@react-navigation/stack'
 import HomeScreen from './screens/home'
 import PlaygroundScreen from './screens/playground'
+import SlidesOneScreen from './screens/slides-one'
+import SoundcloudWaveformScreen from './screens/soundcloud-waveform'
 
 const Stack = createStackNavigator<StackParamList>()
 const stackOptions: StackNavigationOptions = {
@@ -24,6 +26,16 @@ export default function App() {
         <Stack.Screen
           name="Playground"
           component={PlaygroundScreen}
+          options={stackOptions}
+        />
+        <Stack.Screen
+          name="SlidesOne"
+          component={SlidesOneScreen}
+          options={stackOptions}
+        />
+        <Stack.Screen
+          name="SoundcloudWaveform"
+          component={SoundcloudWaveformScreen}
           options={stackOptions}
         />
       </Stack.Navigator>

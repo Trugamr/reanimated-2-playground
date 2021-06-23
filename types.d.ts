@@ -7,6 +7,8 @@ type StackParamList = {
     header?: string
   }
   Playground: undefined
+  SlidesOne: undefined
+  SoundcloudWaveform: undefined
 }
 
 type NavigationProps<T extends keyof StackParamList> = {

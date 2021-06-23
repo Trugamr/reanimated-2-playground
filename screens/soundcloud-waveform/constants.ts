@@ -1,0 +1,5 @@
+export const STICK_WIDTH = 2
+export const STICK_MARGIN = 1
+export const STICK_FULL_WIDTH = STICK_WIDTH + STICK_MARGIN
+export const NUMBER_OF_STICKS = 150
+export const WAVEFORM_WIDTH = STICK_FULL_WIDTH * NUMBER_OF_STICKS
