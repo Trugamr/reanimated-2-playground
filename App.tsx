@@ -8,6 +8,7 @@ import HomeScreen from './screens/home'
 import PlaygroundScreen from './screens/playground'
 import SlidesOneScreen from './screens/slides-one'
 import SoundcloudWaveformScreen from './screens/soundcloud-waveform'
+import Ripples from './screens/ripples'
 
 const Stack = createStackNavigator<StackParamList>()
 const stackOptions: StackNavigationOptions = {
@@ -36,6 +37,11 @@ export default function App() {
         <Stack.Screen
           name="SoundcloudWaveform"
           component={SoundcloudWaveformScreen}
+          options={stackOptions}
+        />
+        <Stack.Screen
+          name="Ripples"
+          component={Ripples}
           options={stackOptions}
         />
       </Stack.Navigator>

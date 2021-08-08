@@ -16,6 +16,7 @@ const screens: [
   ['Playground', undefined, 'Playground'],
   ['SlidesOne', undefined, 'Slides One'],
   ['SoundcloudWaveform', undefined, 'Soundcloud Waveform'],
+  ['Ripples', undefined, 'Ripples'],
 ]
 
 const HomeScreen = ({ navigation }: Props) => {
