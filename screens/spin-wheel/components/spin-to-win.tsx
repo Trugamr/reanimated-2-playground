@@ -17,13 +17,13 @@ import Animated, {
   useAnimatedStyle,
   useSharedValue,
   withRepeat,
-  withSpring,
   withTiming,
 } from 'react-native-reanimated'
 import Palette from '../../../palette'
 import Reward, { RewardProps } from './reward'
 
 const PI = Math.PI
+const ROTATION_DURATION = 500 // in ms for 1 rotation
 
 interface SpinToWinProps {
   children: ReactElement<RewardProps>[]
@@ -62,7 +62,10 @@ const SpinToWinComponent = forwardRef<SpinToWinRef, SpinToWinProps>(
     const startSpinning = () => {
       animatedTheta.value = 0
       animatedTheta.value = withRepeat(
-        withTiming(2 * PI, { duration: 600, easing: Easing.linear }),
+        withTiming(2 * PI, {
+          duration: ROTATION_DURATION,
+          easing: Easing.linear,
+        }),
         Infinity,
       )
     }
@@ -71,9 +74,14 @@ const SpinToWinComponent = forwardRef<SpinToWinRef, SpinToWinProps>(
       const theta = interpolate(index, [0, rewards.length], [0, 2 * PI])
       const nextTheta =
         Math.ceil(animatedTheta.value / (2 * PI)) * 2 * PI + theta
-      animatedTheta.value = withSpring(nextTheta, {
-        damping: 20,
-        stiffness: 100,
+      const duration = interpolate(
+        nextTheta - animatedTheta.value,
+        [0, 2 * PI],
+        [0, ROTATION_DURATION],
+      )
+      animatedTheta.value = withTiming(nextTheta, {
+        duration,
+        easing: Easing.linear,
       })
     }
 
