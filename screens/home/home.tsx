@@ -17,6 +17,7 @@ const screens: [
   ['SlidesOne', undefined, 'Slides One'],
   ['SoundcloudWaveform', undefined, 'Soundcloud Waveform'],
   ['Ripples', undefined, 'Ripples'],
+  ['SpinWheel', undefined, 'Spin Wheel'],
 ]
 
 const HomeScreen = ({ navigation }: Props) => {
