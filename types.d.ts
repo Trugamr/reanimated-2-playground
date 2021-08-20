@@ -11,6 +11,7 @@ type StackParamList = {
   SoundcloudWaveform: undefined
   Ripples: undefined
   SpinWheel: undefined
+  ScrollingTicker: undefined
 }
 
 type NavigationProps<T extends keyof StackParamList> = {

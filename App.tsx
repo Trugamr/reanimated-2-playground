@@ -10,6 +10,7 @@ import SlidesOneScreen from './screens/slides-one'
 import SoundcloudWaveformScreen from './screens/soundcloud-waveform'
 import Ripples from './screens/ripples'
 import SpinWheel from './screens/spin-wheel'
+import ScrollingTickerScreen from './screens/scrolling-ticker'
 
 const Stack = createStackNavigator<StackParamList>()
 const stackOptions: StackNavigationOptions = {
@@ -19,36 +20,19 @@ const stackOptions: StackNavigationOptions = {
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Home">
-        <Stack.Screen
-          name="Home"
-          component={HomeScreen}
-          options={stackOptions}
-        />
-        <Stack.Screen
-          name="Playground"
-          component={PlaygroundScreen}
-          options={stackOptions}
-        />
-        <Stack.Screen
-          name="SlidesOne"
-          component={SlidesOneScreen}
-          options={stackOptions}
-        />
+      <Stack.Navigator initialRouteName="Home" screenOptions={stackOptions}>
+        <Stack.Screen name="Home" component={HomeScreen} />
+        <Stack.Screen name="Playground" component={PlaygroundScreen} />
+        <Stack.Screen name="SlidesOne" component={SlidesOneScreen} />
         <Stack.Screen
           name="SoundcloudWaveform"
           component={SoundcloudWaveformScreen}
-          options={stackOptions}
         />
+        <Stack.Screen name="Ripples" component={Ripples} />
+        <Stack.Screen name="SpinWheel" component={SpinWheel} />
         <Stack.Screen
-          name="Ripples"
-          component={Ripples}
-          options={stackOptions}
-        />
-        <Stack.Screen
-          name="SpinWheel"
-          component={SpinWheel}
-          options={stackOptions}
+          name="ScrollingTicker"
+          component={ScrollingTickerScreen}
         />
       </Stack.Navigator>
     </NavigationContainer>

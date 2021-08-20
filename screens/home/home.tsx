@@ -18,6 +18,7 @@ const screens: [
   ['SoundcloudWaveform', undefined, 'Soundcloud Waveform'],
   ['Ripples', undefined, 'Ripples'],
   ['SpinWheel', undefined, 'Spin Wheel'],
+  ['ScrollingTicker', undefined, 'Scrolling Ticker'],
 ]
 
 const HomeScreen = ({ navigation }: Props) => {
